@@ -1,0 +1,74 @@
+@mixin smallText{
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 200;
+}
+@mixin mediumText{
+    font-size: 2rem;
+    line-height: 30px;
+    font-weight: 300;
+
+}
+@mixin largeText{
+    font-size: 2rem;
+    line-height: 40px;
+    font-weight: 400;
+
+}
+
+@mixin desktop{
+    @media (max-width: 1024px){
+        @content;
+        } 
+
+}
+@mixin tablet{
+    @media (max-width: 780px){
+        @content;
+        } 
+
+}
+@mixin phone{
+    @media (max-width: 400px){
+        @content;
+        } 
+
+}
+
+@mixin test1 ($color: yellow, $w: 500px, $h: 100px){
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color;
+    width: $w;
+    height: $h;
+
+}
+
+.class3 {
+border: 1px solid black;
+@include smallText;
+@include phone;
+}
+
+.class2 {
+    border: 1px solid black;
+    @include mediumText;
+    @include tablet;
+    }
+
+.class1 {
+border: 1px solid black;
+@include largeText;
+@include desktop;
+}
+
+.testing1 {
+    border: 1px solid black;
+    @include test1;
+    }
+
+.testing2 {
+border: 1px solid black;
+@include test1(color blue, 100px 100px);
+}

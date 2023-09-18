@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css2?family=Mooli&family=Shadows+Into+Light&family=The+Nautigal&display=swap);
+.p1{
+font-size: 2rem;
+}
+
+.p2{
+    font-size: 2rem;
+    }
+
+.p3{
+font-size: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .p1{
+            color: blue;
+            font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .p2{
+            color: red;
+            font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .p3{
+            color: violet;
+            font-size: 2rem;
+    }
+}
